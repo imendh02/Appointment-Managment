@@ -1,0 +1,50 @@
+.tags {
+    margin: 40px;
+    padding: 20px;
+   
+    border-radius: 10px;
+    height: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+.tags-header {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 40px;
+}
+.tags-header button {
+    width: 200px;
+    height: 47px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+::ng-deep .mat-grid-tile-content {
+    justify-content: space-between !important;
+}
+.tags .tag-card {
+    background-color: white !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 60px;
+    border-radius: 10px;
+}
+.tags .tag-body {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 100%;
+}
+.tags .tag-body span {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--header-color);
+}
+.tags .tag-color {
+    height: 100%;
+    width: 45px;
+}
+.tags .tag-actions {
+    display: flex;
+    float: right !important;
+    margin-right: 10px;
+    gap: 5px;
+}

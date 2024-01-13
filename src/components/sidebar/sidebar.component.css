@@ -1,0 +1,66 @@
+.sidebar {
+    height: 100%;
+    background-color: var(--main-color);
+    width: 270px;
+}
+.sidebar-logo {
+    padding: 29px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+}
+.sidebar-items {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+.sidebar-items li {
+    position: relative;
+    height: 60px;
+    margin-left: 13px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.sidebar-items li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.sidebar-items .selected-item  {
+    background-color: var(--main-background);
+    border-radius: 15px 0 0 15px;
+    /*transition: background-color 0.3s ease;*/
+}
+.sidebar-items .selected-item a {
+    color:var(--main-color)
+}
+.sidebar-items .selected-item a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 20px;
+    pointer-events: none;
+    background-color: transparent;
+    box-shadow: 5px 5px 0 5px var(--main-background);
+}
+.sidebar-items .selected-item a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 20px;
+    pointer-events: none;
+    background-color: transparent;
+    box-shadow: 5px -5px 0 5px var(--main-background);
+}

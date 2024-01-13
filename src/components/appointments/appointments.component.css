@@ -1,0 +1,46 @@
+.calendar {
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+.calendar-header {
+    width: 20%;
+}
+.calendar-header button {
+    width: 80%;
+    background-color: var(--main-color);
+    color: white;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+}
+.cal {
+    width: 80%;
+}
+.calendar-tags {
+    margin-top: 35px;
+}
+.calendar-tags .calendar-tags-title {
+    text-transform: uppercase;
+    font-size: 17px;
+    color : #6c757d
+}
+.calendar-tags ul{
+    list-style: none;
+    padding-inline-start: 0px !important;
+}
+.calendar-tags ul li {
+    margin-bottom: 14px;
+}
+.calendar-tags ul li span {
+    margin-left: 10px;
+}
+.custom-highlight {
+    border-radius: 6px;
+}
+.calendar-tags-item ::ng-deep .p-checkbox .p-checkbox-box.p-highlight {
+    background: inherit !important;
+    border: inherit !important;
+  }

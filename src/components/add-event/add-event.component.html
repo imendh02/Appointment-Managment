@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add Event</h1>
+<div class="event-dialog-content">
+    <div class="form-input">
+        <label for="title">Title</label>
+        <input pInputText id="title" placeholder="Title" [(ngModel)]="event.title">
+    </div>  
+    <div class="form-input">
+        <label for="title">Tags</label>
+        <p-dropdown class="dropdown" [options]="tags" optionLabel="name" placeholder="Select a Tag"></p-dropdown>
+    </div>
+    <div class="form-input">
+        <label for="title">Date</label>
+        <p-calendar [(ngModel)]="event.date" [showTime]="true" [showSeconds]="true"></p-calendar>
+    </div>
+    <div class="form-input">
+        <label for="title">Description</label>
+        <textarea rows="5" cols="30" pInputTextarea [autoResize]="true"></textarea>
+    </div>
+    <div mat-dialog-actions class="dialog-actions">
+        <button class="button-cancel" mat-button (click)="onCancelClick()">Cancel</button>
+        <button class="button-ok" mat-button cdkFocusInitial (click)="onSaveClick()">Save</button>
+    </div>
+</div>

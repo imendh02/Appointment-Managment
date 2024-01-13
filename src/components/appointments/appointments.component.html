@@ -1,0 +1,33 @@
+<div class="calendar">
+    <div class="calendar-header">
+        <button mat-raised-button (click)="addEvent()">Add Event</button>
+        <div class="calendar-tags">
+            <span class="calendar-tags-title">Tags</span>
+            <ul>
+                <li>
+                    <p-checkbox
+                    [binary]="true"
+                    inputId="binary"
+                    [(ngModel)]="checkedAll"
+                    (ngModelChange)="selectAllTags()"
+                    ></p-checkbox>
+                    <span>View All</span>
+                </li>
+                <li *ngFor="let tag of tags" class="calendar-tags-item">
+                    <p-checkbox
+                    [binary]="true"
+                    inputId="binary"
+                    [(ngModel)]="tag.checked"
+                    (ngModelChange)="changeTag()"
+                    [ngClass]="{'custom-highlight': tag.checked}"
+                    [ngStyle]="{
+                        'background': tag.checked ? tag.color : 'inherit',
+                        'border-color': tag.checked ? tag.color : 'inherit'}"
+                    ></p-checkbox>
+                    <span>{{tag.name}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <full-calendar class="cal" [options]="calendarOptions"></full-calendar>
+</div>

@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <div class="sidebar-logo">
+        Appointments Management
+    </div>
+    <ul class="sidebar-items">
+        <li *ngFor="let data of navData"
+        [class.selected-item]="isActive(data.routeLink)"
+        routerLinkActive="active">
+            <a
+            [routerLink]="data.routeLink"
+            (click)="onItemClick(data.label)">
+            <mat-icon>{{ data.icon }}</mat-icon><span>{{ data.label}} </span>
+        </a>
+        </li>
+    </ul>
+</div>

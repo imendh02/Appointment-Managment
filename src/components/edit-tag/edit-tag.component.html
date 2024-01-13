@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Edit Tag</h1>
+<div mat-dialog-content class="dialog-content">
+    <div class="form-input">
+        <label>Name:</label>
+        <input matInput placeholder="Name" [(ngModel)]="data.name">
+    </div>  
+    <div class="form-input">
+        <label>Color:</label>
+        <input matInput type="color" [(ngModel)]="data.color">
+    </div> 
+    <div mat-dialog-actions class="dialog-actions">
+        <button class="button-cancel" mat-button (click)="onCancelClick()">Cancel</button>
+        <button class="button-ok" mat-button cdkFocusInitial (click)="onSaveClick()">Save</button>
+    </div>
+</div>

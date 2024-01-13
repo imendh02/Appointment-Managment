@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+:root {
+    --main-color : #00253e;
+    --main-background : #f2f2f2;
+    --header-color : #00111c;
+}
+html, body { min-height: 100%; }
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+.form-input label {
+    margin-left: 5px;
+    margin-bottom: 7px;
+    color : #6c757d;
+    font-size: 14px;
+}
+.form-input input{
+    margin-bottom: 15px;
+}
+/*.form-input input {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #adb5bd;
+    padding: 0 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}*/
+.form-input input[type="color"] {
+    width: 100%;
+}
+/*.form-input input::placeholder {
+    color : #adb5bd;
+}*/
+.form-input input:hover {
+    border : 1px solid var(--main-color);
+}
+.form-input input:focus {
+    outline: none;
+    border : 1px solid var(--main-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.dialog-content {
+    font-family: 'Poppins', sans-serif !important;
+}
+.dialog-actions {
+    display: flex !important;
+    justify-content: right !important;
+    margin-top: 15px !important;
+}
+.dialog-actions button {
+    padding: 20px 25px !important;
+}
+.dialog-actions .button-ok {
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+.dialog-actions .button-cancel {
+    color : var(--main-color) !important
+}

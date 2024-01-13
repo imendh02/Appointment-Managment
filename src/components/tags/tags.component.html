@@ -1,0 +1,21 @@
+<div class="tags">
+    <div class="tags-header">
+        <button mat-raised-button color="primary" (click)="addTags()">
+            <mat-icon>add</mat-icon>
+            <span>Add Tags</span>
+        </button>
+    </div>
+    <mat-grid-list cols="3" rowHeight="60px" gutterSize="30px">
+        <mat-grid-tile class="tag-card" *ngFor="let tag of tags">
+            <div class="tag-body">
+                <div class="tag-color" [style.background]="tag.color"></div>
+                <span>{{ tag.name }}</span>
+            </div>
+            <div class="tag-actions">
+                <mat-icon style="color: #495057; cursor: pointer;" (click)="editTag(tag)">edit</mat-icon>
+                <mat-icon style="color: #495057; cursor: pointer;" (click)="deleteTag(tag._id)">delete</mat-icon>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<p-toast position="bottom-right"></p-toast>
